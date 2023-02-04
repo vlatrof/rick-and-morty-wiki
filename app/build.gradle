@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-kapt'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.vlatrof.rickandmorty'
+    compileSdk build_versions.compileSdk
+
+    packagingOptions {
+        exclude "win32-x86-64/attach_hotspot_windows.dll"
+        exclude "win32-x86/attach_hotspot_windows.dll"
+        exclude "META-INF/AL2.0"
+        exclude "META-INF/LGPL2.1"
+        exclude "META-INF/licenses/ASM"
+        exclude "META-INF/LICENSE.md"
+        exclude "META-INF/LICENSE-notice.md"
+    }
+
+    defaultConfig {
+        applicationId "com.vlatrof.rickandmorty"
+        minSdk build_versions.minSdk
+        targetSdk build_versions.targetSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(path: ':data')
+    implementation project(path: ':domain')
+
+    implementation "androidx.appcompat:appcompat:$deps_versions.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$deps_versions.constraintLayout"
+    implementation "androidx.core:core-ktx:$deps_versions.corektx"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$deps_versions.swipeRefreshLayout"
+    implementation "androidx.fragment:fragment-ktx:$deps_versions.androidxFragment"
+    implementation "com.squareup.retrofit2:retrofit:$deps_versions.retrofit"
+    implementation "io.coil-kt:coil:$deps_versions.coil"
+    implementation "com.google.android.material:material:$deps_versions.material"
+    implementation "com.google.dagger:dagger:$deps_versions.dagger"
+    kapt "com.google.dagger:dagger-compiler:$deps_versions.dagger"
+
+    implementation "androidx.test.ext:junit-ktx:$deps_versions.junitKtx"
+    implementation "androidx.test.espresso:espresso-idling-resource:$deps_versions.espresso"
+    implementation "io.kotest:kotest-runner-junit5:$deps_versions.kotest"
+    testImplementation "io.kotest:kotest-runner-junit5:$deps_versions.kotest"
+    testImplementation "io.kotest:kotest-assertions-core:$deps_versions.kotest"
+    testImplementation "io.mockk:mockk:$deps_versions.mockk"
+    testImplementation "androidx.arch.core:core-testing:$deps_versions.androidxArchCoreTesting"
+    testImplementation "junit:junit:$deps_versions.junit"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$deps_versions.coroutinesTest"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$deps_versions.espresso"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$deps_versions.espresso"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$deps_versions.espresso"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$deps_versions.espresso"
+}

@@ -1,0 +1,25 @@
+ext.build_versions = [:]
+build_versions.minSdk = 21
+build_versions.targetSdk = 33
+build_versions.compileSdk = 33
+
+ext.deps_versions = [:]
+deps_versions.appcompat = "1.6.0"
+deps_versions.constraintLayout = "2.1.4"
+deps_versions.coreKtx = "1.9.0"
+deps_versions.room = "2.5.0"
+deps_versions.swipeRefreshLayout = "1.1.0"
+deps_versions.dagger = "2.44.2"
+deps_versions.androidxFragment = "1.5.5"
+deps_versions.material = "1.8.0"
+deps_versions.loggingInterceptor = "5.0.0-alpha.3"
+deps_versions.retrofit = "2.9.0"
+deps_versions.coil = "2.2.0"
+deps_versions.androidxArchCoreTesting = "2.1.0"
+deps_versions.junit = "4.13.2"
+deps_versions.junitKtx = "1.1.5"
+deps_versions.mockk = "1.13.2"
+deps_versions.coroutinesTest = "1.5.2"
+deps_versions.androidxJunit = "1.1.5"
+deps_versions.espresso = "3.3.0"
+deps_versions.kotest = "5.5.1"

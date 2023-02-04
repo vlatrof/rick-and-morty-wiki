@@ -1,0 +1,94 @@
+<resources>
+    <!-- Common -->
+    <string name="app_name">Rick And Morty Wiki</string>
+    <string name="btn_filter_text">Filter</string>
+    <string name="btn_filter_content_description">Filter items</string>
+    <string name="character_image_content_description">Character image</string>
+    <string name="error_message_network_connection_error">Offline mode: network connection error</string>
+    <string name="error_message_unknown_network_error">Offline mode: unknown remote error</string>
+    <string name="error_message_something_went_wrong">Something went wrong</string>
+    <string name="str_component_dimension">Dimension</string>>
+    <string name="fragment_filter_apply_button_text">Apply</string>
+    <string name="fragment_filter_cancel_button_text">Cancel</string>
+    <string name="fragment_filter_clear_button_text">Clear</string>
+    <string name="message_such_items_not_found">No such items found</string>
+    <string name="toolbar_search_view_hint">Search</string>
+
+    <!-- Bottom navigation menu -->
+    <string name="bottom_navigation_menu_characters_title">Characters</string>
+    <string name="bottom_navigation_menu_characters_content_description">Characters</string>
+    <string name="bottom_navigation_menu_locations_title">Locations</string>
+    <string name="bottom_navigation_menu_locations_content_description">Locations</string>
+    <string name="bottom_navigation_menu_episodes_title">Episodes</string>
+    <string name="bottom_navigation_menu_episodes_content_description">Episodes</string>
+
+    <!-- Character list fragment -->
+    <string name="character_list_screen_title">Characters</string>
+
+    <!-- Location list fragment -->
+    <string name="location_list_screen_title">Locations</string>
+
+    <!-- Episode list fragment -->
+    <string name="episode_list_screen_title">Episodes</string>
+
+    <!-- Character details fragment -->
+    <string name="character_details_screen_title">Character Details</string>
+    <string name="character_details_screen_image_content_description">Character image</string>
+    <string name="character_details_screen_subtitle_episodes">Episodes:</string>
+
+    <!-- Location details fragment -->
+    <string name="location_details_screen_title">Location Details</string>
+    <string name="location_details_screen_subtitle_residents">Residents:</string>
+    <string name="location_details_screen_subtitle_no_residents">No residents found</string>
+
+    <!-- Episode details fragment -->
+    <string name="episode_details_screen_title">Episode Details</string>
+    <string name="episode_details_screen_subtitle_characters">Characters:</string>
+
+    <!-- Character filter fragment -->
+    <string name="fragment_character_filter_title">Filter characters</string>
+    <string name="character_filter_species_hint">Species</string>
+    <string name="character_filter_type_hint">Type</string>
+    <string name="character_filter_gender_hint">Gender</string>
+    <string name="character_filter_status_hint">Status</string>
+
+    <!-- Location filter fragment -->
+    <string name="fragment_location_filter_title">Filter locations</string>
+    <string name="location_filter_type_hint">Type</string>
+    <string name="location_filter_dimension_hint">Dimension</string>
+
+    <!-- Episode filter fragment -->
+    <string name="fragment_episode_filter_title">Filter episodes</string>
+    <string name="episode_filter_code_hint">Code</string>
+
+    <!-- Character item -->
+    <string name="character_item_species">Species: %1$s</string>
+    <string name="character_item_type">Type: %1$s</string>
+    <string name="character_item_gender">Gender: %1$s</string>
+    <string name="character_item_status">Status: %1$s</string>
+    <string name="character_item_origin_location">Origin location: %1$s</string>
+    <string name="character_item_last_location">Last location: %1$s</string>
+
+    <!-- Location item -->
+    <string name="location_item_type">Type: %1$s</string>
+    <string name="location_item_dimension">Dimension: %1$s</string>
+
+    <!-- Episode item -->
+    <string name="episode_item_code">Code: %1$s</string>
+    <string name="episode_item_air_date">Air date: %1$s</string>
+
+    <!-- Character gender filter items -->
+    <string-array name="character_gender_filter_items">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Genderless</item>
+        <item>Unknown</item>
+    </string-array>
+
+    <!-- Character status filter items -->
+    <string-array name="character_status_filter_items">
+        <item>Alive</item>
+        <item>Dead</item>
+        <item>Unknown</item>
+    </string-array>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_card_view_elevation">4dp</dimen>
+    <dimen name="common_card_view_corner_radius">20dp</dimen>
+    <dimen name="common_text_size_medium">18sp</dimen>
+    <dimen name="common_text_size_large">25sp</dimen>
+    <dimen name="common_text_size_extra_large">35sp</dimen>
+    <dimen name="common_margin_large">30dp</dimen>
+    <dimen name="common_margin_medium">20dp</dimen>
+    <dimen name="common_margin_small">10dp</dimen>
+    <dimen name="dialog_fragment_filter_width">350dp</dimen>
+    <dimen name="fragment_character_details_image_height">200dp</dimen>
+    <dimen name="toolbar_image_button_padding">12dp</dimen>
+    <dimen name="tv_error_bar_vertical_padding">2dp</dimen>
+    <dimen name="list_item_content_padding">20dp</dimen>
+    <dimen name="list_item_image_height">150dp</dimen>
+    <dimen name="list_item_title_text_size">@dimen/common_text_size_medium</dimen>
+    <dimen name="list_item_gap">12dp</dimen>
+</resources>
