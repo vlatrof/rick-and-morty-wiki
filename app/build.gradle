@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.vlatrof.rickandmorty'
-    compileSdk build_versions.compileSdk
+    compileSdk ver.compileSdk
 
     packagingOptions {
         exclude "win32-x86-64/attach_hotspot_windows.dll"
@@ -20,10 +20,10 @@ android {
 
     defaultConfig {
         applicationId "com.vlatrof.rickandmorty"
-        minSdk build_versions.minSdk
-        targetSdk build_versions.targetSdk
-        versionCode 1
-        versionName "1.0"
+        minSdk ver.minSdk
+        targetSdk ver.targetSdk
+        versionCode ver.versionCode
+        versionName ver.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
@@ -45,31 +45,31 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':data')
-    implementation project(path: ':domain')
+    implementation project(":data")
+    implementation project(":domain")
 
-    implementation "androidx.appcompat:appcompat:$deps_versions.appcompat"
-    implementation "androidx.constraintlayout:constraintlayout:$deps_versions.constraintLayout"
-    implementation "androidx.core:core-ktx:$deps_versions.corektx"
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$deps_versions.swipeRefreshLayout"
-    implementation "androidx.fragment:fragment-ktx:$deps_versions.androidxFragment"
-    implementation "com.squareup.retrofit2:retrofit:$deps_versions.retrofit"
-    implementation "io.coil-kt:coil:$deps_versions.coil"
-    implementation "com.google.android.material:material:$deps_versions.material"
-    implementation "com.google.dagger:dagger:$deps_versions.dagger"
-    kapt "com.google.dagger:dagger-compiler:$deps_versions.dagger"
+    implementation "$dep.androidxFragmentKtx:$ver.androidxFragmentKtx"
+    implementation "$dep.appcompat:$ver.appcompat"
+    implementation "$dep.coil:$ver.coil"
+    implementation "$dep.constraintLayout:$ver.constraintLayout"
+    implementation "$dep.coreKtx:$ver.corektx"
+    implementation "$dep.dagger:$ver.dagger"
+    kapt "$dep.daggerCompiler:$ver.dagger"
+    implementation "$dep.material:$ver.material"
+    implementation "$dep.retrofit2:$ver.retrofit2"
+    implementation "$dep.swipeRefreshLayout:$ver.swipeRefreshLayout"
 
-    implementation "androidx.test.ext:junit-ktx:$deps_versions.junitKtx"
-    implementation "androidx.test.espresso:espresso-idling-resource:$deps_versions.espresso"
-    implementation "io.kotest:kotest-runner-junit5:$deps_versions.kotest"
-    testImplementation "io.kotest:kotest-runner-junit5:$deps_versions.kotest"
-    testImplementation "io.kotest:kotest-assertions-core:$deps_versions.kotest"
-    testImplementation "io.mockk:mockk:$deps_versions.mockk"
-    testImplementation "androidx.arch.core:core-testing:$deps_versions.androidxArchCoreTesting"
-    testImplementation "junit:junit:$deps_versions.junit"
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$deps_versions.coroutinesTest"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$deps_versions.espresso"
-    androidTestImplementation "androidx.test.espresso:espresso-contrib:$deps_versions.espresso"
-    androidTestImplementation "androidx.test.espresso:espresso-intents:$deps_versions.espresso"
-    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$deps_versions.espresso"
+    testImplementation "$dep.androidxArchCoreTesting:$ver.androidxArchCoreTesting"
+    testImplementation "$dep.coroutinesTest:$ver.coroutinesTest"
+    androidTestImplementation "$dep.espressoCore:$ver.espresso"
+    androidTestImplementation "$dep.espressoContrib:$ver.espresso"
+    androidTestImplementation "$dep.espressoIdlingResource:$ver.espresso"
+    implementation "$dep.espressoIdlingResource:$ver.espresso"
+    androidTestImplementation "$dep.espressoIntents:$ver.espresso"
+    testImplementation "$dep.junit:$ver.junit"
+    implementation "$dep.junitKtx:$ver.androidxJunit"
+    implementation "$dep.kotestRunner:$ver.kotest"
+    testImplementation "$dep.kotestRunner:$ver.kotest"
+    testImplementation "$dep.kotestAssertionsCore:$ver.kotest"
+    testImplementation "$dep.mockk:$ver.mockk"
 }

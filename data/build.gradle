@@ -6,15 +6,15 @@ plugins {
 
 android {
     namespace 'com.vlatrof.rickandmorty.data'
-    compileSdk build_versions.compileSdk
+    compileSdk ver.compileSdk
 
     def localPropertiesFile = rootProject.file("constant.properties")
     def localProperties = new Properties()
     localProperties.load(new FileInputStream(localPropertiesFile))
 
     defaultConfig {
-        minSdk build_versions.minSdk
-        targetSdk build_versions.targetSdk
+        minSdk ver.minSdk
+        targetSdk ver.targetSdk
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "BASE_URL", localProperties['baseUrl']
         buildConfigField "String", "DATABASE_NAME", localProperties['databaseName']
@@ -36,15 +36,15 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':domain')
+    implementation project(":domain")
 
-    annotationProcessor "androidx.room:room-compiler:$deps_versions.room"
-    kapt "androidx.room:room-compiler:$deps_versions.room"
-    implementation "androidx.room:room-ktx:$deps_versions.room"
-    api "androidx.room:room-runtime:$deps_versions.room"
-    implementation "com.google.dagger:dagger:$deps_versions.dagger"
-    kapt "com.google.dagger:dagger-compiler:$deps_versions.dagger"
-    implementation "com.squareup.okhttp3:logging-interceptor:$deps_versions.loggingInterceptor"
-    implementation "com.squareup.retrofit2:converter-gson:$deps_versions.retrofit"
-    implementation "com.squareup.retrofit2:retrofit:$deps_versions.retrofit"
+    implementation "$dep.dagger:$ver.dagger"
+    kapt "$dep.daggerCompiler:$ver.dagger"
+    implementation "$dep.okhttp3LoggingInterceptor:$ver.loggingInterceptor"
+    implementation "$dep.retrofit2:$ver.retrofit2"
+    implementation "$dep.retrofit2ConverterGson:$ver.retrofit2"
+    annotationProcessor "$dep.roomCompiler:$ver.room"
+    kapt "$dep.roomCompiler:$ver.room"
+    implementation "$dep.roomKtx:$ver.room"
+    api "$dep.roomRuntime:$ver.room"
 }

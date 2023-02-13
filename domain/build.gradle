@@ -10,6 +10,6 @@ java {
 }
 
 dependencies {
-    implementation "com.google.dagger:dagger:$deps_versions.dagger"
-    kapt "com.google.dagger:dagger-compiler:$deps_versions.dagger"
+    implementation "$dep.dagger:$ver.dagger"
+    kapt "$dep.daggerCompiler:$ver.dagger"
 }
