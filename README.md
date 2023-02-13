@@ -1,2 +1,2 @@
 ## Rick and Morty Wiki App
-Made with open api: https://rickandmortyapi.com/
+Made with open api: https://rickandmortyapi.com
