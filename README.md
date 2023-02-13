@@ -1,3 +1,2 @@
-## Комментарии для преподавателя:
-
-1) По договоренности было разрешено использование minSDK API 21
+## Rick and Morty Wiki App
+Made with open api: https://rickandmortyapi.com/
